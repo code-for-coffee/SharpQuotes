@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpQuotes", "SharpQuotes\SharpQuotes.csproj", "{E4D3928C-AE6E-449A-B2BE-DC9B5318D957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpQuotes.Tests", "SharpQuotes.Tests\SharpQuotes.Tests.csproj", "{99CB19CA-9C0D-4742-B1D7-EFAD64D5812D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4D3928C-AE6E-449A-B2BE-DC9B5318D957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D3928C-AE6E-449A-B2BE-DC9B5318D957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D3928C-AE6E-449A-B2BE-DC9B5318D957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D3928C-AE6E-449A-B2BE-DC9B5318D957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99CB19CA-9C0D-4742-B1D7-EFAD64D5812D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99CB19CA-9C0D-4742-B1D7-EFAD64D5812D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99CB19CA-9C0D-4742-B1D7-EFAD64D5812D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99CB19CA-9C0D-4742-B1D7-EFAD64D5812D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
