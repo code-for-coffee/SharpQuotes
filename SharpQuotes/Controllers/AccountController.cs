@@ -31,8 +31,10 @@ namespace SharpQuotes.Controllers
 			var model = (User)Session["user"];
 			if (model.comparePassword(password) == true)
 			{
+				// display success view
 				return View("ValidLogin");
 			}
+			// display invalid view
 			return View("InvalidLogin");
 		}
 		public ActionResult Logout()
