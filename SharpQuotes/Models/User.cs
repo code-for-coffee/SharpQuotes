@@ -7,6 +7,8 @@ namespace SharpQuotes
 	{
 		public User(string name, string email, string password)
 		{
+			this.username = name;
+			this.email = email;
 			this.passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
 		}
 		private string passwordHash;
