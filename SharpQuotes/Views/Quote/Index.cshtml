@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Quotes";
+}
+
+<h2>Index</h2>
+
+@{
+	List<Quote> quotes = (List<Quote>) Session["quotesList"];
+	var inc = 1;
+}
+
+<ul>
+@foreach(Quote q in quotes) {
+	@: <li> @Html.ActionLink(inc.ToString(), "details/" + inc.ToString())
+	@q.text 
+	@: </li>
+	inc++;
+}
+</ul>
