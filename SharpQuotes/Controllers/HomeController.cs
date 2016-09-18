@@ -9,7 +9,6 @@ namespace SharpQuotes.Controllers
 {
 	public class HomeController : Controller
 	{
-		private List<Quote> quotesList = new List<Quote>();
 		public ActionResult Index()
 		{
 			var mvcName = typeof(Controller).Assembly.GetName();
@@ -18,6 +17,20 @@ namespace SharpQuotes.Controllers
 			ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
 			ViewData["Runtime"] = isMono ? "Mono" : ".NET";
 
+			// get quotes or make new list if none exist
+			if (Session["quotesList"] == null) {
+				Session["quotesList"] = new List<Quote>();
+			}
+
+			// grab item since Session will not allow you to add directly
+			// to subchild
+			var temp = (List<Quote>)Session["quotesList"];
+			// add
+			temp.Add(
+				new Quote("Lambchop", "And it goes on and on my friend")
+			);
+			// set back to session
+			Session["quotesList"] = temp;
 			return View();
 		}
 	}

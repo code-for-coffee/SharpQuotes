@@ -1,2 +1,16 @@
 ﻿<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
 
+@{
+	List<Quote> quotes = (List<Quote>) Session["quotesList"];
+}
+
+<ul>
+@foreach(Quote q in quotes) {
+	@: <li>"
+	@q.text 
+	@: "
+	@: by
+	@q.author
+	@: </li>
+}
+</ul>
