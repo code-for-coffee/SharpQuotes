@@ -8,9 +8,38 @@ namespace SharpQuotes.Controllers
 {
     public class AccountController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Register()
         {
-            return View ();
+			// display the Registration form
+            return View();
         }
+		[HttpPost]
+		public ActionResult Register(string username, string email, string password)
+		{
+			// instantiate new user model
+			var model = new User(username, email, password);
+			// set session variables (auto-login); change for production (demo purposes only!)
+			// no database is attached so we store the created User in Sessionn
+			Session["user"] = model;
+			// pass the model off to the view for registration confirmation
+			return View(model);
+		}
+		[HttpPost]
+		public ActionResult Login(string email, string password)
+		{
+			// login via emaill
+			var model = (User)Session["user"];
+			if (model.comparePassword(password) == true)
+			{
+				return View("ValidLogin");
+			}
+			return View("InvalidLogin");
+		}
+		public ActionResult Logout()
+		{
+			// clear session
+			Session["user"] = null;
+			return View();
+		}
     }
 }
