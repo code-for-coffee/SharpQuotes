@@ -12,7 +12,16 @@
 </head>
 <body>
 	<nav>
-		<em>@message</em>
+	<em>@message</em>
+	@if (sessionVar == null) 
+		{
+			@Html.ActionLink("Register", "register", "account")	
+			@Html.Raw(" or ")
+			@Html.ActionLink("Login", "login", "account")	
+		} else if (sessionVar != null) {
+			@Html.ActionLink("Logout", "logout", "account")
+		}
+	
 	</nav>
 	@RenderBody()
 </body>

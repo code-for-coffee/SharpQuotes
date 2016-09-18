@@ -22,7 +22,7 @@ namespace SharpQuotes.Controllers
 			// no database is attached so we store the created User in Sessionn
 			Session["user"] = model;
 			// pass the model off to the view for registration confirmation
-			return View(model);
+			return View("registerPost");
 		}
 		[HttpPost]
 		public ActionResult Login(string email, string password)

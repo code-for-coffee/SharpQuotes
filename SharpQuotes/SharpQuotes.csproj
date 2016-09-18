@@ -94,6 +94,8 @@
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="Views\Account\registerGet.cshtml" />
+    <Content Include="Views\Account\registerPost.cshtml" />
+    <Content Include="Views\Account\logout.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

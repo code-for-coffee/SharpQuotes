@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Registration Completed";
+    var sessionVar = (User)Session["user"];
+}
+
+<h2>Registration Completed!</h2>
+
+Welcome to our site, @sessionVar.username!
+
+@Html.ActionLink("Return home", "home")
+
+
+
