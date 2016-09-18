@@ -1,9 +1,19 @@
-﻿<!DOCTYPE html>
+﻿@{
+	var sessionVar = (User)Session["user"];
+	var message = "Welcome. Register to continue?";
+	if (sessionVar != null) {
+		message = String.Format("Welcome back, {0}", sessionVar.username);
+	}
+}
+<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
 </head>
 <body>
+	<nav>
+		<em>@message</em>
+	</nav>
 	@RenderBody()
 </body>
 </html>

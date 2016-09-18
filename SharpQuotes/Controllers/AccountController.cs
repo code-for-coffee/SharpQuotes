@@ -11,7 +11,7 @@ namespace SharpQuotes.Controllers
         public ActionResult Register()
         {
 			// display the Registration form
-            return View();
+            return View("registerGet");
         }
 		[HttpPost]
 		public ActionResult Register(string username, string email, string password)

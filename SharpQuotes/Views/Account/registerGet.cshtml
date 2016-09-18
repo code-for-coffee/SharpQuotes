@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using(@Html.BeginForm()) {
+	<fieldset>
+	<legend>User Account</legend>
+	@Html.Label("Your username")
+	@Html.TextBox("username")
+
+	@Html.Label("Your email address")
+	@Html.TextBox("email")
+
+	@Html.Label("Your secret password")
+	@Html.Password("password")
+    <input type="submit" value="Register">
+
+
+	</fieldset>
+}
