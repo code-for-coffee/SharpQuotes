@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Logged in";
+    var sessionVar = (User)Session["user"];
+}
+
+<h2>You're logged in!</h2>
+
+Welcome back, @sessionVar.username!
+
+@Html.ActionLink("Return home", "index", "home")
+

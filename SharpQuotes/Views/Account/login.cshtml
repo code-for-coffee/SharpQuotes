@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "login";
+}
+
+<h2>Login</h2>
+
+@using(@Html.BeginForm()) {
+	<fieldset>
+	<legend>User Account</legend>
+
+	@Html.Label("Your email address")
+	@Html.TextBox("email")
+
+	@Html.Label("Your secret password")
+	@Html.Password("password")
+    <input type="submit" value="Login">
+
+	</fieldset>
+}

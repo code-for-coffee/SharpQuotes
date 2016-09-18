@@ -24,6 +24,10 @@ namespace SharpQuotes.Controllers
 			// pass the model off to the view for registration confirmation
 			return View("registerPost");
 		}
+		public ActionResult Login()
+		{
+			return View();
+		}
 		[HttpPost]
 		public ActionResult Login(string email, string password)
 		{
@@ -32,10 +36,10 @@ namespace SharpQuotes.Controllers
 			if (model.comparePassword(password) == true)
 			{
 				// display success view
-				return View("ValidLogin");
+				return View("loginSuccess");
 			}
 			// display invalid view
-			return View("InvalidLogin");
+			return View("loginFailure");
 		}
 		public ActionResult Logout()
 		{

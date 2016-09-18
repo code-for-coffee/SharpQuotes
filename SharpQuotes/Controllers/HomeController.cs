@@ -9,6 +9,7 @@ namespace SharpQuotes.Controllers
 {
 	public class HomeController : Controller
 	{
+		private List<Quote> quotesList = new List<Quote>();
 		public ActionResult Index()
 		{
 			var mvcName = typeof(Controller).Assembly.GetName();
